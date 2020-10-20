@@ -1,5 +1,7 @@
-OS: Linux
+get_SDOC.py is the main python script for SDOC calculation and can be run directly. 
+
 Dependencies:
+Linux OS
 1. Perl
 2. Python3 (Required libraries:: numpy, scipy, scikit-learn, pandas, setuptools, iced, pastis, config, configparser)
 Conflicts between libraries may happen, and here is a list of libraries that works on ubuntu 16.04 for reference:
@@ -21,6 +23,7 @@ threadpoolctl   2.1.0
 wheel           0.35.1
 3. R (Required package: preprocessCore)
 
+Usage:
 Prepare these files as input in seperate directories:
 1. Hi-C contact matrices as individual .tsv file for each chromosome, and rename each Hi-C contact matrix file as "celltype_chromosome", where the "celltype" part should be set as the "-celltype" parameter when running the script with user's own data. For example, when the -celltype parameter is set to "GM12878", Hi-C contact matrix files should be named as "GM12878_chr1", "GM12878_chr2",....
 2. a bed file containing chromosomes, starts and ends of all TADs
