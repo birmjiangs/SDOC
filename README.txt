@@ -39,3 +39,11 @@ Description of each parameter:
 -resolution: The binning size of Hi-C contact matrix files.
 -out_dir: The parent directory of all output files.
 -DHS_dir: The directory containing the open chromatin regions/peaks file.
+
+The result file can be found at -out_dir/-celltype_SDOC.tsv, each row contains information of a TAD. Detailed information of each column is listed below:
+1st column: TAD chromosome
+2nd column: TAD start
+3rd column: TAD end
+4th column: total number of open chromatin regions in the TAD
+5th column: raw volumn of the TAD
+6th column: SDOC of the TAD
