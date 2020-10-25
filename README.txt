@@ -51,4 +51,5 @@ The result file can be found at -out_dir/-celltype_SDOC.tsv, each row contains i
 5th column: raw volumn of the TAD
 6th column: SDOC of the TAD
 
-An alternative way to calculate SDOC using user-defined datasets is to manually replace the names of directories and files of example data by those of user's own data in line 8-13 of get_SDOC.py.
+An alternative way to calculate SDOC using user-defined datasets is to manually replace the names of directories and files of example data by those of user's own data in line 8-13 of get_SDOC.py, then run the script with no parameter:
+python ./get_SDOC.py
