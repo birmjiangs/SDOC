@@ -1,6 +1,7 @@
 get_SDOC.py is the main python script for SDOC calculation and can be run directly. 
 
 **Dependencies**
+
 Linux OS
 1. Perl
 2. Python3 (Required libraries:: numpy, scipy, scikit-learn, pandas, setuptools, iced, pastis, config, configparser)
