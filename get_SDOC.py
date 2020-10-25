@@ -4,8 +4,8 @@ import sys
 
 def main():
 
-      # run with example dataset
-    do_celltype = "IMR90"# 
+    # run with example dataset
+    do_celltype = "IMR90"
     TAD_input_dir = "./example_data/TADs/"
     HiC_matrix_dir = "./example_data/HiC_matrices/"
     resolution = 25000
@@ -13,12 +13,12 @@ def main():
     DHS_file_in = "./example_data/DNase_seq_peaks/ENCSR477RTP_rep1_1_rep1_2_rep1_3_rep1_4_se_bwa_biorep_filtered_peaks.bed"
     
     if len(sys.argv) == 7:
-        do_celltype = sys.argv[1]# "GM12878" #  , job name,  #GM12878, IMR90, K562, HUVEC
-        TAD_input_dir = sys.argv[2]#"./TADs/"
-        HiC_matrix_dir = sys.argv[3]#"/mnt/hgfs/E/SupWork/2020/SDOC_analysis/BIB/a0-get_matrix/5kb/1-binning&KRnorm/2_norm_matrix/" #sys.argv[2]
-        resolution = sys.argv[4] #5000 # 
-        out_dir = sys.argv[5] #"./out_SDOC/"  #sys.argv[4]
-        DHS_file_in = sys.argv[6] #./open_chromatin_peaks/GM12878"
+        do_celltype = sys.argv[1]
+        TAD_input_dir = sys.argv[2]
+        HiC_matrix_dir = sys.argv[3]
+        resolution = sys.argv[4]
+        out_dir = sys.argv[5] 
+        DHS_file_in = sys.argv[6] 
     
     if TAD_input_dir[-1] != "/":
         TAD_input_dir = TAD_input_dir + "/"
