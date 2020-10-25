@@ -33,9 +33,9 @@ Example input files are in "example_data" directory. To test SDOC calculation sc
 "python ./get_SDOC.py"
 
 To calculate SDOC values of TADs with your own data, all parameters are required to be specified:
-'''bash
+```bash
 python ./get_SDOC.py -celltype -TAD_dir -Hi-C_dir -resolution -out_dir -DHS_dir
-'''
+```
 
 **Description of each parameter**
 -celltype: A job name. The script uses this parameter to find Hi-C contact matrix file in -Hi-C_dir, and to create a specific directory for temp files. 
@@ -54,6 +54,6 @@ The result file can be found at -out_dir/-celltype_SDOC.tsv, each row contains i
 6th column: SDOC of the TAD
 
 An **alternative** way to calculate SDOC using user-defined datasets is to manually replace the names of directories and files of example data by those of user's own data in line 8-13 of get_SDOC.py, then run the script with no parameter:
-'''bash
+```bash
 python ./get_SDOC.py
-'''
+```
