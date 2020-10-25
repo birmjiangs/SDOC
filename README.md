@@ -25,6 +25,7 @@ wheel           0.35.1
 3. R (Required package: preprocessCore)
 
 **Usage**
+
 Prepare these files as input in seperate directories:
 1. Hi-C contact matrices as individual .tsv file for each chromosome, and rename each Hi-C contact matrix file as "celltype_chromosome", where the "celltype" part should be set as the "-celltype" parameter when running the script with user's own data. For example, when the -celltype parameter is set to "GM12878", Hi-C contact matrix files should be named as "GM12878_chr1", "GM12878_chr2",....
 2. a bed file containing chromosomes, starts and ends of all TADs
@@ -39,6 +40,7 @@ python ./get_SDOC.py -celltype -TAD_dir -Hi-C_dir -resolution -out_dir -DHS_dir
 ```
 
 **Description of each parameter**
+
 -celltype: A job name. The script uses this parameter to find Hi-C contact matrix file in -Hi-C_dir, and to create a specific directory for temp files. 
 -TAD_dir: The directory containing the TAD bed file (no requirement for the name of the TAD bed file).
 -Hi-C_dir: The directory containing Hi-C contact matrix files.
