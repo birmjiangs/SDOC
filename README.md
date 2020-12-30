@@ -1,6 +1,6 @@
 get_SDOC.py is the main python script for SDOC calculation and can be run directly. 
 
-**Dependencies:**  
+##**Dependencies:**  
 Linux OS
 1. Perl
 2. Python3 (Required libraries:: numpy, scipy, scikit-learn, pandas, setuptools, iced, pastis, config, configparser)  
@@ -23,7 +23,7 @@ threadpoolctl   2.1.0
 wheel           0.35.1  
 3. R (Required package: preprocessCore)  
 
-**Usage:**  
+##**Usage:**  
 Prepare these files as input in seperate directories:  
 1. Hi-C contact matrices as individual .tsv file for each chromosome, and rename each Hi-C contact matrix file as "celltype_chromosome", where the "celltype" part should be set as the "-celltype" parameter when running the script with user's own data. For example, when the -celltype parameter is set to "GM12878", Hi-C contact matrix files should be named as "GM12878_chr1", "GM12878_chr2",....  
 2. a bed file containing chromosomes, starts and ends of all TADs  
@@ -38,13 +38,13 @@ To calculate SDOC values of TADs with your own data, all parameters are required
 python ./get_SDOC.py <-celltype> <-TAD_dir> <-Hi-C_dir> <-resolution> <-out_dir> <-DHS_dir>
 ```
 
-**Description of each parameter:**  
-*-celltype*: A job name. The script uses this parameter to find Hi-C contact matrix file in -Hi-C_dir, and to create a specific directory for temp files.   
-*-TAD_dir*: The directory containing the TAD bed file. NOTE that the start and end positions in the TAD bed file should be set as integral multiples of -resolution (no requirement for the name of the TAD bed file).   
-*-Hi-C_dir*: The directory containing Hi-C contact matrix files.  
-*-resolution*: The binning size of Hi-C contact matrix files.  
-*-out_dir*: The parent directory of all output files.  
-*-DHS_dir*: The directory containing the open chromatin regions/peaks file.  
+##**Description of each parameter:**  
+**-celltype**: A job name. The script uses this parameter to find Hi-C contact matrix file in -Hi-C_dir, and to create a specific directory for temp files.   
+**-TAD_dir**: The directory containing the TAD bed file. NOTE that the start and end positions in the TAD bed file should be set as integral multiples of -resolution (no requirement for the name of the TAD bed file).   
+**-Hi-C_dir**: The directory containing Hi-C contact matrix files.  
+**-resolution**: The binning size of Hi-C contact matrix files.  
+**-out_dir**: The parent directory of all output files.  
+**-DHS_dir**: The directory containing the open chromatin regions/peaks file.  
   
 The result file can be found at -out_dir/-celltype_SDOC.tsv, each row contains information of a TAD. Detailed information of each column is listed below:  
 1st column: TAD chromosome  
