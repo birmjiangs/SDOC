@@ -35,12 +35,12 @@ To test SDOC calculation scripts with example data, run the "get_SDOC.py" python
 
 To calculate SDOC values of TADs with your own data, all parameters are required to be specified:
 ```bash
-python ./get_SDOC.py -celltype -TAD_dir -Hi-C_dir -resolution -out_dir -DHS_dir
+python ./get_SDOC.py <-celltype> <-TAD_dir> <-Hi-C_dir> <-resolution> <-out_dir> <-DHS_dir>
 ```
 
 **Description of each parameter:**  
 -celltype: A job name. The script uses this parameter to find Hi-C contact matrix file in -Hi-C_dir, and to create a specific directory for temp files.  
--TAD_dir: The directory containing the TAD bed file (no requirement for the name of the TAD bed file).  
+-TAD_dir: The directory containing the TAD bed file. NOTE that the start and end positions in the TAD bed file should be set as integral multiples of -resolution (no requirement for the name of the TAD bed file).  
 -Hi-C_dir: The directory containing Hi-C contact matrix files.  
 -resolution: The binning size of Hi-C contact matrix files.  
 -out_dir: The parent directory of all output files.  
